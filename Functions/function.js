@@ -1,0 +1,94 @@
+// write a function to add two numbers
+
+function sum(x, y){
+    sum = x + y;
+    return sum;
+}
+console.log(sum(3, 5));
+
+// Create a function to reverse a string.
+
+function reverse(str){
+    
+    return str.split('').reverse().join('');
+}
+console.log(reverse("Shruti"));
+
+function reverseString(str){
+    let reversed = '';
+    for(let i=str.length -1; i>=0; i--){
+        reversed += str[i];
+    }
+    return reversed;
+}
+console.log(reverseString("hello Shruti"));
+
+// Write a function that returns the factorial of a number.
+
+function factorial(n){
+    let fact = 1;
+    for(i = 2; i <= n; i++){
+        fact = fact * i;
+    }
+    return fact;
+}
+console.log(factorial(5));
+
+// create a function to check if string is palindrom or not
+
+function palindrom(str){
+    let str1 = str.split('').reverse('').join('');
+
+    if(str1 == str){
+        console.log(`${str} the string is palindrom`);
+    } else {
+        console.log(`${str} this is not a palindrom string`);
+    }
+}
+console.log(palindrom("Shruti"));
+
+// write a function to find the maximum number in an array.
+
+function Max(arr){
+    return Math.max(...arr);
+}
+console.log(Max([5,2,6,8,4,2,9,10]));
+
+// Write a function to flatten a nested array.
+
+function flattenArray(arr){
+    return arr.flat(Infinity);
+}
+console.log(flattenArray([1, [2, [3, 4], 5], 6]));
+
+//Create a function to remove duplicates from an array.
+
+function duplicate(n){
+   return[...new Set(n)];
+}
+
+console.log(duplicate([1,4,5,8,6,2,7,5,3,5,2]));
+
+// Write a function that accepts any number of arguments and returns their sum.
+
+function sums(...numm){
+    return numm.reduce((total,num) => total + num, 0);
+    // reduce() iterates through the array and adds up all numbers.
+}
+console.log(sums(5,6,8,5,6));
+
+// Write a higher-order function that accepts a function and a value.
+// Write a higher-order function that accepts a function and a value, and applies the function to the value.
+
+function applyFunction(fn, value){
+    return fn(value);
+}
+
+function square(num) {
+    return num*num;
+}
+
+console.log(applyFunction(square, 5));
+
+// Implement a map() function manually.
+
