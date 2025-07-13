@@ -90,5 +90,68 @@ function square(num) {
 
 console.log(applyFunction(square, 5));
 
-// Implement a map() function manually.
+function returnSquare(num){
+    return num * num;
+}
+console.log(returnSquare(6));
+
+// Write a function to check if a number is prime.
+function isPrime(num) {
+    if (num <=1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isPrime(7)); // true
+console.log(isPrime(10)); // false  
+
+// Write a function to find the longest word in a sentence.
+function longestWord(sentence) {
+    const words = sentence.split(' ');
+    let longest = '';
+    
+    for (let word of words) {
+        if (word.length > longest.length) {
+            longest = word;
+        }
+    }
+    
+    return longest;
+}
+console.log(longestWord("The quick brown fox jumps over the lazy dog")); // "jumps"
+
+// Write a function to count the occurrences of each character in a string.
+function countOccurrences(str) {
+    const occurrences = {};
+    
+    for (let char of str) {
+        occurrences[char] = (occurrences[char] || 0) + 1;
+    }
+    
+    return occurrences;
+}
+console.log(countOccurrences("hello world")); // { h: 1, e: 1, l: 3, o: 2, ' ': 1, w: 1, r: 1, d: 1 }
+
+// Write a function to find the intersection of two arrays.
+function intersection(arr1, arr2) { 
+    return arr1.filter(value => arr2.includes(value));
+}
+console.log(intersection([1, 2, 3, 4], [3, 4, 5, 6])); // [3, 4]
+
+// Write a function to convert a string to title case.
+
+function toTitleCase(str) {
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+}
+console.log(toTitleCase("hello world")); // "Hello World"
+
+
 
