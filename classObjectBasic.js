@@ -30,3 +30,21 @@ class Student extends Person{
 
 const student = new Student ("Shruti", 25, "A");
 console.log(student.introduce());
+
+
+
+class Car{
+    constructor(brand, model){
+        this.brand = brand;
+        this. model = model;
+    }
+
+    details(){
+        return `the brand = ${this.brand} and model = ${this.model}`
+    }
+}
+
+const car = new Car("Tata", "Tesla");
+console.log(car.details());
+
+
