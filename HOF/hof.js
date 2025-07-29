@@ -3,7 +3,6 @@ function h(x, fn) {
     // fn -> Function to be applied
     console.log(x*x);
     fn(x*x); // Call the function passed as an argument 
-    // fn(x); // Call the function passed as an argument with original value
 
 }
 
@@ -14,7 +13,7 @@ function h(x, fn) {
 h(10, exec);
 
 function exec(n) {
-    console.log("squared value is", n)
+    console.log("squared value is", n) // 100 
 }
 
 
