@@ -153,5 +153,26 @@ function toTitleCase(str) {
 }
 console.log(toTitleCase("hello world")); // "Hello World"
 
+function twoNum (a, b){
+    return a + b;
+}
+console.log(twoNum(10, 20)); // Output: 30
 
+function LargestNumber(arr) {
+    return Max(arr);
+}
+console.log(LargestNumber([10, 20, 30, 40])); // Output: 40
+
+function Sentence(str) {
+    return str.split('').reverse().join('');
+}
+console.log(Sentence("Hello World")); // Output: "dlroW olleH"
+
+// isPlaindrom 
+function isPalindrome(str){
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+console.log(isPalindrome("level"));
+console.log(isPalindrome("hello")); // false
 

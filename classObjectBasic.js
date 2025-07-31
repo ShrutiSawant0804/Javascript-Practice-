@@ -48,3 +48,4 @@ const car = new Car("Tata", "Tesla");
 console.log(car.details());
 
 
+
