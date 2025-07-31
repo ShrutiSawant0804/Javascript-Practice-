@@ -176,3 +176,29 @@ function isPalindrome(str){
 console.log(isPalindrome("level"));
 console.log(isPalindrome("hello")); // false
 
+// first non- repeating character
+function firstNonRepeatingCharacter(str) {
+    for(let char of str){
+        if (str.indexOf(char)===str.lastIndexOf(char)) {
+            return char;
+        }
+    }
+    return null; // if no non-repeating character found
+}
+console.log(firstNonRepeatingCharacter("swiss")); // Output: "w"
+console.log(firstNonRepeatingCharacter("hello")); // Output: "h"
+
+// check vowels
+function checkVowels(str){
+    const vowels = "aeiouAEIOU";
+    let count = 0;
+
+    for (let chat of str){
+        if(vowels.includes(chat)){
+            count ++;
+        }
+    }
+    return count;
+}
+console.log(checkVowels("Hello India")); // Output: 5
+
