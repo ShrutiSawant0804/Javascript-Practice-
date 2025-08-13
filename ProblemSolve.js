@@ -62,3 +62,18 @@ const product = {
 const propertyName = 'price'; // Property to retrieve
 const value = getPropertyValue(product, propertyName);  
 console.log(`The value of the property "${propertyName}" is: ${value}`); // Print the value of the property
+
+// Create a constructor function Animal that takes name and sound as parameters, and has a method makeSound() that logs the sound.
+
+function Animal(name, sound) {
+    this.name = name;   
+    this.sound = sound;
+
+    this.makeSound = function() { // Method to make sound
+        console.log(`${this.name} says: ${this.sound}`);
+    }
+}
+
+const dog = new Animal('Dog', 'bhaoo'); // Create an instance of Animal
+dog.makeSound(); // Call the makeSound method on dog instance
+
