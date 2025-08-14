@@ -71,9 +71,57 @@ function Animal(name, sound) {
 
     this.makeSound = function() { // Method to make sound
         console.log(`${this.name} says: ${this.sound}`);
+        console.log('-------------------');
     }
 }
 
 const dog = new Animal('Dog', 'bhaoo'); // Create an instance of Animal
 dog.makeSound(); // Call the makeSound method on dog instance
 
+// Create a constructor function Book with properties title, author, and a method getDetails() that returns "Title by Author".
+
+function Book(title, author) {
+    this.title = title; // Property for book title
+    this.author = author; // Property for book author
+}
+
+Book.prototype.getDetails = function() { // Method to get book details
+    return `${this.title} by ${this.author}`; // Return formatted string
+    
+}
+
+const book = new Book('1984', 'George Orwell'); // Create an instance of Book
+console.log(book.getDetails()); // Call the getDetails method and print the result
+console.log('-------------------');
+
+// Using a constructor, create multiple Student objects with name and grade, and log their details.
+
+function Student(name, grade) {
+    this.name = name;
+    this.grade = grade;
+}
+
+Student.prototype.getDetails = function() { // Method to get student details
+    console.log(`Name: ${this.name}, Grade: ${this.grade}`);    
+}
+
+const student1 = new Student('John', 'A'); // Create an instance of Student
+const student2 = new Student('Jane', 'B'); // Create another instance of Student
+student1.getDetails();      
+student2.getDetails(); // Call the getDetails method on both instances
+
+// Create a Person class with a constructor that sets name and age. Add a method introduce() that prints "I am ___ years old".
+
+class Person1 {
+    constructor(name, age) { // Constructor to initialize properties
+        this.name = name; // Property for person's name
+        this.age = age; // Property for person's age
+    }
+
+    introduce() {
+        console.log(`I am ${this.age} years old.`); // Method to introduce age
+    }
+}
+
+const person1 = new Person1('Alice', 25); // Create an instance of Person
+person1.introduce(); // Call the introduce method on person1 instance
