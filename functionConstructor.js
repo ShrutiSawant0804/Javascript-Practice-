@@ -57,3 +57,14 @@ console.log(person1.calculateBMI());
 
 
 
+function Flight(destination, price, duration) {
+    this.destination = destination;
+    this.price = price;
+    this.duration = duration;
+
+    this.flightBook = function() {
+        return `Flight to ${this.destination} costs $${this.price} and takes ${this.duration} hours.`;
+    }
+}
+const flight1 = new Flight('New York', 300, 5); // Create an instance of Flight
+console.log(flight1.flightBook());
