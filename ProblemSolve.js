@@ -125,3 +125,5 @@ class Person1 {
 
 const person1 = new Person1('Alice', 25); // Create an instance of Person
 person1.introduce(); // Call the introduce method on person1 instance
+
+
