@@ -127,3 +127,62 @@ const person1 = new Person1('Alice', 25); // Create an instance of Person
 person1.introduce(); // Call the introduce method on person1 instance
 
 
+// Product with discount 
+class Product {
+    constructor(name, price, category) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+
+    getDiscount(discountPrecent){
+        return this.price - (this.price * discountPrecent / 100);
+    }
+}
+
+const prod = new Product("Laptop", 50000, "Electronics");
+console.log(prod.getDiscount(10));
+
+// Bank Account
+
+class BankAccount {
+    constructor(owner, balance){
+        this.owner = owner;
+        this.balance = balance;
+    }
+
+    deposit(amount){
+        this.balance += amount;
+        console.log(`Deposited: ₹${amount}. Total Balance: ₹${this.balance}`);
+    }
+
+    withdraw(amount){
+        if(amount <= this.balance){
+            this.balance -= amount;
+            console.log(`Withdrawn: ₹${amount}. Total Balance: ₹${this.balance}`);
+        } else {
+            console.log("Insufficient funds!");
+        }
+    }
+}
+
+const acc = new BankAccount("Shruti", 10000);
+acc.deposit(10000);
+acc.withdraw(100);
+
+// Book getSummary
+
+class BookSummary {
+    constructor(title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+
+    getSummary() {
+        return `${this.title} by ${this.author}, ${this.pages} pages.`; // Return formatted summary
+    }
+}
+const book1 = new BookSummary('The Great Gatsby', 'F. Scott Fitzgerald', 180); // Create an instance of BookSummar
+console.log(book1.getSummary()); // Call the getSummary method and print the result
+console.log('-------------------');
