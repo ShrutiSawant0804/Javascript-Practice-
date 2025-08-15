@@ -28,3 +28,32 @@ const myCircle = new circle(10); // Create an instance of circle
 console.log(`Area of the circle: ${myCircle.area()}`);  
 console.log(`Circumference of the circle: ${myCircle.circumference()}`); // Print circumference of the circle
 console.log('-------------------');
+
+
+
+function Bike(brand, model) {
+    this.brand = brand;
+    this.model = model; 
+}
+
+const bike1 = new Bike('Yamaha', 'FZ'); // Create an instance of Bike
+const bike2 = new Bike('Honda', 'CBR'); // Create another instance of Bike
+console.log(`Bike 1: ${bike1.brand} ${bike1.model}`); // Print details of bike1
+console.log(`Bike 2: ${bike2.brand} ${bike2.model}`);
+
+
+
+function Person(name, weight, height) {
+    this.name = name;
+    this.weight = weight;
+    this.height = height;   
+
+    this.calculateBMI = function() { // Method to calculate BMI
+        return `BMI of ${this.name} is ${(this.weight / (this.height * this.height)).toFixed(2)}`;
+    };
+}
+const person1 = new Person('John', 70, 1.75); // Create an instance of Person
+console.log(person1.calculateBMI());
+
+
+
