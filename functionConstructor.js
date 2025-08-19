@@ -68,3 +68,19 @@ function Flight(destination, price, duration) {
 }
 const flight1 = new Flight('New York', 300, 5); // Create an instance of Flight
 console.log(flight1.flightBook());
+
+function Laptop(brand, model, price) {
+    this.brand = brand;
+    this.model = model;
+    this.price = price;
+    
+    this.printDetails = function() {
+        console.log(`Brand: ${this.brand}`);    
+        console.log(`Model: ${this.model}`);
+        console.log(`Price: $${this.price}`);
+        console.log('-------------------');
+    }   
+}
+
+const laptop1 = new Laptop('Dell', 'XPS 13', 1200); // Create an instance of Laptop
+laptop1.printDetails(); 
